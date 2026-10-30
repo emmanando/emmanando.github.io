@@ -1,0 +1,50 @@
+:root {
+  --fondo: #faf7f2;
+  --texto: #1f1c18;
+  --suave: #5e574e;
+  --tarjeta: #ffffff;
+  --borde: #e6dfd3;
+  --acento: #c8372d;
+  --acento2: #8a5a2b;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #16140f;
+    --texto: #f1ece4;
+    --suave: #b3aa9d;
+    --tarjeta: #211e18;
+    --borde: #3a342b;
+    --acento: #ff6b5e;
+    --acento2: #e0a96d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header.marca { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+header.marca a.logo { font-weight: 800; font-size: 1.3rem; color: var(--texto); text-decoration: none; letter-spacing: -0.01em; }
+header.marca a.logo span { color: var(--acento); }
+nav a { color: var(--suave); text-decoration: none; margin-left: 16px; font-size: 0.95rem; }
+nav a:first-child { margin-left: 0; }
+nav a:hover { color: var(--acento); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+h3 { font-size: 1.05rem; margin: 20px 0 4px; }
+p.lead { color: var(--suave); font-size: 1.1rem; margin-top: 0; }
+a { color: var(--acento); }
+.canales { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+.canal { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px; padding: 20px; text-align: center; }
+.canal img { width: 120px; height: 120px; border-radius: 50%; }
+.canal h3 { margin: 12px 0 4px; }
+.canal p { color: var(--suave); margin: 0 0 8px; font-size: 0.95rem; }
+.caja { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px; padding: 4px 20px 16px; margin: 24px 0; }
+.idioma { border-top: 1px solid var(--borde); margin-top: 48px; padding-top: 24px; }
+.fecha { color: var(--suave); font-size: 0.9rem; }
+footer { border-top: 1px solid var(--borde); margin-top: 48px; padding-top: 16px; color: var(--suave); font-size: 0.9rem; }
+footer a { color: var(--suave); }
